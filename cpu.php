@@ -41,7 +41,7 @@ if($cpumax - $cpu < 0.2) { // Réglez comme vous le souhaitez
 	mail($mail,$sujet,$message,$header);
 	
 	ssh2_exec($connection, 'sudo service nginx restart');
-	ssh2_exec($connection, 'sudo service mysqld restart');
+	ssh2_exec($connection, 'sudo service php5-fpm restart')
 
 }
 
